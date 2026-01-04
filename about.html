@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>网站导航 - 关于</title>
+    <!-- Favicon 配置 -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="src/styles.css">
+    
+    <!-- 主题防闪烁脚本 -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body class="about-page">
+    <header class="header">
+        <div class="container header-container">
+            <h1 class="site-title">🔗 网站导航</h1>
+            <div class="header-controls">
+                <button 
+                    id="themeToggle" 
+                    class="control-btn theme-toggle" 
+                    aria-label="切换主题"
+                    aria-pressed="false"
+                    title="切换主题"
+                    role="switch">
+                    🌙
+                </button>
+            </div>
+            <nav class="nav" aria-label="主导航">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="about.html" class="nav-link active" aria-current="page">关于</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main">
+        <div class="about-content">
+            <div class="card about-card">
+                <h2 class="about-title">📋 关于本站</h2>
+                <p class="about-text">这是一个简洁实用的网址导航网站，收集了各类常用网站，方便快速访问。</p>
+                
+                <div class="about-features">
+                    <h3>✨ 功能特点</h3>
+                    <ul class="feature-list">
+                        <li><strong>多搜索引擎</strong>：支持 Google、Bing、百度一键切换</li>
+                        <li><strong>主题切换</strong>：亮色/暗色模式，护眼舒适</li>
+                        <li><strong>响应式设计</strong>：完美适配电脑、平板、手机</li>
+                        <li><strong>智能分类</strong>：网站按功能分类，快速查找</li>
+                        <li><strong>无障碍访问</strong>：完整的键盘导航和屏幕阅读器支持</li>
+                        <li><strong>安全防护</strong>：外部链接安全处理，保护隐私</li>
+                        <li><strong>紧凑模式</strong>：一键切换紧凑布局，查看更多内容</li>
+                    </ul>
+                </div>
+                
+                <div class="about-stats">
+                    <h3>📊 网站统计</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">17</div>
+                            <div class="stat-label">收录网站</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">分类目录</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">搜索引擎</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-tech">
+                    <h3>🛠️ 技术栈</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Flexbox</span>
+                        <span class="tech-tag">Grid</span>
+                        <span class="tech-tag">ARIA</span>
+                        <span class="tech-tag">响应式</span>
+                        <span class="tech-tag">无障碍</span>
+	v<!-- 在 about-shortcuts 部分之前添加作者联系信息 -->
+<div class="about-author">
+    <h3>👤 作者信息</h3>
+    <div class="author-info">
+        <p>网站设计与开发</p>
+        <div class="contact-links">
+            <a href="https://github.com/tang-jiajun" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="contact-link">
+                <span class="contact-icon">🐙</span> GitHub
+            </a>
+            <a href="https://jiajuntang.dpdns.org" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="contact-link">
+                <span class="contact-icon">🏠</span> 个人主页
+            </a>
+            <a href="mailto:tang-jiajun@outlook.com" 
+               class="contact-link">
+                <span class="contact-icon">✉️</span> 邮箱
+            </a>
+        </div>
+        <p class="contact-email">📧 tang-jiajun@outlook.com</p>
+    </div>
+</div>
+                    </div>
+                </div>
+                
+                <div class="about-shortcuts">
+                    <h3>⌨️ 键盘快捷键</h3>
+                    <ul class="shortcut-list">
+                        <li><kbd>Ctrl</kbd> + <kbd>/</kbd>：聚焦搜索框</li>
+                        <li><kbd>Ctrl</kbd> + <kbd>T</kbd>：切换主题</li>
+                        <li><kbd>Tab</kbd>：导航焦点</li>
+                        <li><kbd>Enter</kbd>：激活项目</li>
+                    </ul>
+                </div>
+                
+                <div class="back-home">
+                    <a href="index.html" class="btn-primary">🏠 返回首页</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 网站导航 | <a href="about.html">关于本站</a></p>
+        </div>
+    </footer>
+
+    <script src="src/main.js"></script>
+</body>
+</html>

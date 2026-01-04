@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>网站导航 - 首页</title>
+    <!-- Favicon 配置 -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="src/styles.css">
+    
+    <!-- 主题防闪烁脚本 -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <h1 class="site-title">🔗 网站导航</h1>
+            <div class="header-controls">
+                <button 
+                    id="compactToggle" 
+                    class="control-btn compact-toggle" 
+                    aria-label="切换紧凑模式"
+                    title="切换紧凑模式">
+                    📖
+                </button>
+                <button 
+                    id="themeToggle" 
+                    class="control-btn theme-toggle" 
+                    aria-label="切换主题"
+                    aria-pressed="false"
+                    title="切换主题"
+                    role="switch">
+                    🌙
+                </button>
+            </div>
+            <nav class="nav" aria-label="主导航">
+                <a href="index.html" class="nav-link active" aria-current="page">首页</a>
+                <a href="about.html" class="nav-link">关于</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main">
+        <!-- 搜索区 -->
+        <section class="search-section" aria-labelledby="search-heading">
+            <h2 id="search-heading" class="visually-hidden">搜索功能</h2>
+            <div class="search-container">
+                <div class="engine-toggles" role="tablist" aria-label="搜索引擎选择">
+                    <button 
+                        class="engine-btn active" 
+                        data-engine="google" 
+                        role="tab" 
+                        aria-selected="true"
+                        aria-controls="search-input">
+                        <span class="engine-icon">🔍</span> Google
+                    </button>
+                    <button 
+                        class="engine-btn" 
+                        data-engine="bing" 
+                        role="tab" 
+                        aria-selected="false"
+                        aria-controls="search-input">
+                        <span class="engine-icon">🔍</span> Bing
+                    </button>
+                    <button 
+                        class="engine-btn" 
+                        data-engine="baidu" 
+                        role="tab" 
+                        aria-selected="false"
+                        aria-controls="search-input">
+                        <span class="engine-icon">🔍</span> 百度
+                    </button>
+                </div>
+                
+                <div class="search-input-group">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="输入关键词搜索..." 
+                        aria-label="搜索输入框"
+                        role="searchbox">
+                    <button 
+                        id="search-btn" 
+                        class="search-btn" 
+                        aria-label="搜索">
+                        🔍 搜索
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 网站分类区 -->
+        <section class="websites-section" aria-labelledby="websites-heading">
+            <h2 id="websites-heading" class="section-title">📚 常用网站</h2>
+            
+            <!-- 资源下载 -->
+            <div class="category">
+                <h3 class="category-title">📥 资源下载</h3>
+                <div class="websites-grid">
+                    <div class="card">
+                        <a href="https://tpb.party/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">The Pirate Bay</h4>
+                            <p class="website-desc">全球最大的BT资源站点</p>
+                            <span class="website-url">tpb.party</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://cilisousuo.co/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">磁力搜索</h4>
+                            <p class="website-desc">磁力链接搜索引擎</p>
+                            <span class="website-url">cilisousuo.co</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 视频娱乐 -->
+            <div class="category">
+                <h3 class="category-title">🎬 视频娱乐</h3>
+                <div class="websites-grid">
+                    <div class="card">
+                        <a href="https://www.bilibili.com/?spm_id_from=333.1007.0.0" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">哔哩哔哩</h4>
+                            <p class="website-desc">弹幕视频分享网站</p>
+                            <span class="website-url">bilibili.com</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.douyin.com/jingxuan" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">抖音精选</h4>
+                            <p class="website-desc">优质短视频内容</p>
+                            <span class="website-url">douyin.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 开发技术 -->
+            <div class="category">
+                <h3 class="category-title">💻 开发技术</h3>
+                <div class="websites-grid">
+                    <div class="card">
+                        <a href="https://tasmota.github.io/docs/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">Tasmota 文档</h4>
+                            <p class="website-desc">开源智能家居固件</p>
+                            <span class="website-url">tasmota.github.io</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://github.com/dashboard" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">GitHub</h4>
+                            <p class="website-desc">代码托管与协作平台</p>
+                            <span class="website-url">github.com</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.docker.com/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">Docker</h4>
+                            <p class="website-desc">容器应用开发</p>
+                            <span class="website-url">docker.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 云服务 -->
+            <div class="category">
+                <h3 class="category-title">☁️ 云服务</h3>
+                <div class="websites-grid">
+                    <div class="card">
+                        <a href="https://www.microsoft.com/zh-cn" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">Microsoft</h4>
+                            <p class="website-desc">AI、云、生产力</p>
+                            <span class="website-url">microsoft.com</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.cloudflare-cn.com/enterprise/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">Cloudflare</h4>
+                            <p class="website-desc">全球云服务平台</p>
+                            <span class="website-url">cloudflare-cn.com</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://mirrors.ustc.edu.cn/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">USTC 镜像站</h4>
+                            <p class="website-desc">开源软件镜像源</p>
+                            <span class="website-url">mirrors.ustc.edu.cn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI与工具 -->
+            <div class="category">
+                <h3 class="category-title">🤖 AI与工具</h3>
+                <div class="websites-grid">
+                    <div class="card">
+                        <a href="https://www.qianwen.com/chat/3b242dca586243b1bbe40b3ec0558301" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">通义千问</h4>
+                            <p class="website-desc">阿里云AI大模型</p>
+                            <span class="website-url">qianwen.com</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://domain.digitalplat.org/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">DigitalPlat</h4>
+                            <p class="website-desc">域名管理平台</p>
+                            <span class="website-url">digitalplat.org</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 存储与阅读 -->
+            <div class="category">
+                <h3 class="category-title">📚 存储与阅读</h3>
+                <div class="websites-grid">
+                    <div class="card">
+                        <a href="https://www.alipan.com/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">阿里云盘</h4>
+                            <p class="website-desc">云存储服务</p>
+                            <span class="website-url">alipan.com</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://z-lib.by/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">Z-Library</h4>
+                            <p class="website-desc">电子书资源库</p>
+                            <span class="website-url">z-lib.by</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 电商购物 -->
+            <div class="category">
+                <h3 class="category-title">🛒 电商购物</h3>
+                <div class="websites-grid">
+                    <div class="card">
+                        <a href="https://re.m.jd.com/page/homelike?ad_od=3&re_dcp=21Sm2D2ZOw&traffic_source=1004&bd_vid=&cu=true&utm_source=haosou-search&utm_medium=cpc&utm_campaign=t_262767352_haosousearch&utm_term=72415908353_0_ed7be7fbf71b4c79ad78dda89f98646e" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">京东热卖</h4>
+                            <p class="website-desc">京东商城热销商品</p>
+                            <span class="website-url">jd.com</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://www.tmall.com/?page_offline=true" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">天猫</h4>
+                            <p class="website-desc">品牌正品购物</p>
+                            <span class="website-url">tmall.com</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="https://mms.pinduoduo.com/login/sso?platform=wholesale&redirectUrl=https%3A%2F%2Fpifa.pinduoduo.com%2Fclint%2Fapi%2Flogin%3Fredirect%3Dhttps%253A%252F%252Fpifa.pinduoduo.com%252F" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="website-link">
+                            <h4 class="website-name">拼多多商家</h4>
+                            <p class="website-desc">店铺管理后台</p>
+                            <span class="website-url">pinduoduo.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 网站导航 | <a href="about.html">关于本站</a> | <a href="#" id="backToTop">返回顶部</a></p>
+            <p class="footer-info">共收录 <span id="siteCount">17</span> 个网站</p>
+        </div>
+    </footer>
+
+    <script src="src/main.js"></script>
+</body>
+</html>
